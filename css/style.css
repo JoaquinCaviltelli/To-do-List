@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection{
+    background: none;
+}
+
+#load{
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../img/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    
+}
+
+@keyframes bg {
+    0%{
+        background-position: left;
+        
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.container{
+    max-width: 800px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding: 20px 20px
+    
+}
+
+
+
+.main{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.main img{
+    padding: 7px 0;
+    cursor: pointer;
+}
+#back{
+    height: 100%;
+    
+}
+#more{
+    height: 80%;
+}
+
+.myDay{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    transition: height 0.5s
+}
+
+.myDayTop{
+    height: 50px;
+
+}
+
+.listContainer{
+    width: 100%;
+    height: calc(100vh - 220px);
+    padding: 10px 0px 40px;
+    overflow: scroll;
+    transition: height 0.5s
+    
+    
+}
+
+.listContainerTop{
+    height: calc(100vh - 170px);
+
+
+}
+
+
+.task{
+    width: 100%;
+    background: rgb(250, 250, 250);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    position: relative;
+    margin: 7px 0;
+    cursor: default;
+}
+.task img{
+    height: 45px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.taskTrash{
+    position: absolute;
+    right: 7px;
+    
+}
+.taskText{
+    margin-right: 50px;
+    padding: 15px 0;
+    color: #666666;
+    
+}
+
+.dateTask{
+    font-size: 9px;
+    padding-top: 4px;
+    color: #999999
+}
+
+.addTask{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+
+input{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.508);
+    color: white;
+}
+
+::placeholder{
+    color: white;
+}
+
+
+@media screen and (max-width : 600px) {
+
+    body{
+        animation: bg linear 100s infinite alternate;
+    }
+    .container{
+      margin: auto
+    }
+}
